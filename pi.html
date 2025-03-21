@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Almarai&family=Tajawal&family=Cairo&family=Noto+Sans+Arabic&family=Dubai&display=swap" rel="stylesheet">
+    <title>العدد Pi</title>
+    <style>
+        body {
+            font-family:'Almarai', sans-serif;
+            margin: 20px;
+            text-align: center;
+            background-image: url(pi3.jpeg) ;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            
+        }
+        input {
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 8px;
+            
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 19px;
+            cursor: pointer;
+            margin: 10px;
+            background-color: rgb(255, 255, 255);
+            border: none;
+            font-family:'Almarai', sans-serif;
+            border-radius: 8px;
+        }
+        input{
+            background-color: rgba(223, 255, 253, 0.767); 
+            margin: 15px;
+            font-size: 22px;
+        }
+        button:hover{
+            background-color:rgb(79, 198, 219);
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            margin: 10px;
+            padding: 10px;
+        }
+        .section{
+        margin-bottom: 30px;
+        font-size: 20px;
+        background-color: rgba(0, 0, 0, 0.74);
+        margin: 20px;
+        padding: 20px;
+        }
+        #result {
+            font-size: 27px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: rgb(255, 255, 255);
+            background-color: rgba(0, 0, 0, 0.596);
+            max-width: 700px;
+            margin-left: 32%;
+            margin-right: 32%;
+        }
+    .calc{
+        height: 570px;
+    }
+    .h1{
+        font-size: 40px;
+        margin: 10px;
+        padding: 15px;
+        margin-top: -7px;
+    }
+    .hoome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+    color: black;
+    background: linear-gradient(to left,rgb(79, 198, 219) 0%, rgb(79, 198, 219) 15%, rgba(255, 255, 255, 80%) 45%, white 60%);
+    height: 300px;
+    }
+
+.links {
+    align-self: flex-end;
+    margin-bottom: 20px;
+    
+}
+
+.links a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: black;
+}
+.links a:hover{
+background-color: rgb(79, 198, 219);
+border-radius: 8px;
+color: white;
+
+
+}
+.content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.left {
+    flex: 1;
+    text-align: center;
+}
+
+.left img {
+    max-width: 200px;
+    height: auto;
+}
+
+.right {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.right h1 {
+    margin-bottom: 10px;
+}
+
+.right p {
+    margin-bottom: 20px;
+}
+.mod {
+    display: flex;
+    grid-template-rows: grid(3,3fr);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+    background-color: #00000085;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem;
+    width: 560px;
+    height: 220px;
+    margin: 15px;
+}
+article:hover{
+    background-color: #000000e7;
+    text-shadow: #ffffff;
+}
+article h3 {
+    color: #ffffff;
+    text-align: center;
+}
+
+article p {
+    color: #ffffff;
+    line-height: 30px;
+}
+
+article a {
+    display: inline-block;
+    margin-top:5px;
+    padding: 0.5rem 1rem;
+    background-color: #000000d7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    display: block;
+}
+article a:hover{
+    background-color: rgba(79, 198, 219, 0.726);
+    
+}
+#com{
+height: 580px;
+margin: 30px;
+}
+
+
+
+
+
+footer{
+text-align: center;
+padding: 10px 0;
+background-color: black;
+color: aliceblue;
+width: 100%;
+bottom: 0;
+margin-bottom: -20px;
+}
+.contactus {
+    width: 300px;
+    margin: 40px auto;
+    padding: 20px;
+    background:rgba(255, 255, 255, 0.582); /* لون وردي فاتح */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.contactus label {
+    font-weight: 500;
+    display: block;
+    margin-top: 10px;
+    color: #444;
+    font-size: 14px;
+}
+
+.contactus input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #ffffffad;
+    transition: 0.3s;
+}
+
+.contactus input:focus {
+    outline: none;
+    border-color: rgb(79, 198, 219); /* لون وردي جميل */
+    box-shadow: 0 0 5px rgb(102, 218, 238);
+}
+
+.contactus button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: rgb(79, 198, 219); /* لون وردي زاهي */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.contactus button:hover {
+    background:  rgb(112, 226, 247); /* لون أغمق قليلاً عند التحويم */
+}
+.in{
+    padding: 30px;
+    margin:  70px 30px 30px;
+    max-height: 550px;
+}
+    </style>
+</head>
+<body>
+    <section class="hoome">
+        <div class="links"> 
+            <nav>
+               
+                <a href="pi.html">الصفحة الرئيسية</a> 
+                <a href="#in">تسجيل دخول</a>
+                <a href="#com">π_عن العدد</a> 
+                <a href="#calc"> π_استخدامات  </a>
+                
+              
+            </nav> 
+        </div>
+        
+        <div class="content">
+            <div class="left">
+                <img src="Pi.jpeg" alt="img">
+            </div>
+            
+            <div class="right">
+                <h1> : π العدد</h1>
+            <p>العدد 
+                𝜋
+                π (باي) هو أحد أكثر الأعداد شهرة في الرياضيات، وله العديد من التطبيقات في العديد من مجالات العلم والهندسة. يُعتبر هذا العدد ثابتًا رياضيًا مهمًا، ورغم أنه لا يمكن التعبير عنه بدقة باستخدام عدد عشري محدود أو ككسر من الأعداد الصحيحة، إلا أنه يعتبر من أهم الأعداد في الرياضيات.</p>
+            </div>
+        </div>
+    </section>
+<section id="com">
+    <div class="mod">
+    <article>
+        <h3> 𝜋 تعريف العدد </h3>
+        <p>  هو نسبة محيط الدائرة إلى قطرها في أي دائرة</p>
+        <a href="#">المزيد</a>
+    </article><article>
+        <h3> 𝜋 خصائص العدد 
+            </h3>
+        <p>عدد غير نسبي:  
+            
+            , عدد غير دوري وغير تكراري هو عدد غير نسبي، مما يعني أنه لا يمكن تمثيله كنسبة بين عددين صحيحين</p>
+        <a href="#">المزيد</a>
+    </article><article>
+        <h3> 𝜋 تاريخ العدد 
+           </h3>
+        <p> لقد كات العدد باي معروفا من العصور القديمة واستعملته عدة حضارات مثل المصرية والحضارات الاسلامية و علماء اليونان القدماء</p>
+        <a href="#">المزيد</a>
+    </article>
+    </div>
+    <div class="mod">
+    <article>
+        <h3> 𝜋 كيفية حساب 
+           </h3>
+        <p>هناك العديد من الطرق الرياضية التي تم تطويرها لحساب قيمة باي بدقة. بعض هذه الطرق تعتمد على التحليلات الهندسية.</p>
+        <a href="#"> المزيد</a>
+    </article><article>
+        <h3>𝜋 تطبيقات العدد 
+           </h3>
+        <p>له العديد من التطبيقات العملية في مختلف مجالات العلوم والهندسة.ا</p>
+        <a href="#">المزيد</a>
+    </article><article>
+        <h3>𝜋 يوم 
+            
+             (Pi Day)</h3>
+        <p> هو يوم عالمي للاحتفال بالعدد باي وهو مايصادف 14 مارس من كل عام</p>
+        <a href="#">المزيد</a>
+    </article>
+    </div>
+</section>
+
+
+
+
+<section class="calc" id="calc">
+    <div class="section">
+        <h1 class="h1">العمليات الحسابية</h1>
+        <p>اختر العملية التي ترغب في تجربتها</p>
+
+        
+        <input type="number" id="radius" placeholder="مثال: 5" />
+        <label for="radius">أدخل نصف القطر</label>
+        
+        <input type="number" id="angle" placeholder="مثال: 90" />
+        <label for="angle">أدخل الزاوية بالدرجات (لحساب القوس والقطاع)</label><br>
+        
+        <input type="number" id="height" placeholder="مثال: 10" />
+        <label for="height">أدخل الارتفاع (لحساب الأسطوانة والمخروط)</label>
+    </div>
+        <div>
+            <button onclick="calculateArea()">حساب مساحة الدائرة</button>
+            <button onclick="calculateCircumference()">حساب محيط الدائرة</button>
+            <button onclick="calculateVolumeSphere()">حساب حجم الكرة</button>
+            <button onclick="calculateArcLength()">حساب طول القوس</button>
+            <button onclick="calculateSectorArea()">حساب مساحة القطاع</button>
+            <button onclick="calculateSurfaceAreaSphere()">حساب مساحة سطح الكرة</button>
+            <button onclick="calculateVolumeCylinder()">حساب حجم الأسطوانة</button>
+            <button onclick="calculateSurfaceAreaCylinder()">حساب مساحة سطح الأسطوانة</button>
+            <button onclick="calculateVolumeCone()">حساب حجم المخروط</button>
+            <button onclick="calculateSurfaceAreaCone()">حساب مساحة سطح المخروط</button>
+        </div>
+
+        <h3>النتيجة:</h3>
+        <p id="result"></p>
+    </div>
+</section>
+    <script>
+        const pi = 3.14159;
+
+        function getRadius() {
+            return parseFloat(document.getElementById('radius').value);
+        }
+
+        function getAngle() {
+            return parseFloat(document.getElementById('angle').value);
+        }
+
+        function getHeight() {
+            return parseFloat(document.getElementById('height').value);
+        }
+
+        function calculateArea() {
+            const radius = getRadius();
+            if (radius > 0) {
+                const area = pi * radius * radius;
+                document.getElementById('result').textContent = `مساحة الدائرة هي: ${area.toFixed(2)} وحدة مربعة`;
+            } else {
+                document.getElementById('result').textContent = "يرجى إدخال قيمة صحيحة لنصف القطر.";
+            }
+        }
+
+        function calculateCircumference() {
+            const radius = getRadius();
+            if (radius > 0) {
+                const circumference = 2 * pi * radius;
+                document.getElementById('result').textContent = `محيط الدائرة هو: ${circumference.toFixed(2)} وحدة`;
+            } else {
+                document.getElementById('result').textContent = "يرجى إدخال قيمة صحيحة لنصف القطر.";
+            }
+        }
+
+        function calculateVolumeSphere() {
+            const radius = getRadius();
+            if (radius > 0) {
+                const volume = (4/3) * pi * Math.pow(radius, 3);
+                document.getElementById('result').textContent = `حجم الكرة هو: ${volume.toFixed(2)} وحدة مكعبة`;
+            } else {
+                document.getElementById('result').textContent = "يرجى إدخال قيمة صحيحة لنصف القطر.";
+            }
+        }
+
+        function calculateArcLength() {
+            const radius = getRadius();
+            const angle = getAngle();
+            if (radius > 0 && angle > 0) {
+                const arcLength = (angle * (pi / 180)) * radius;
+                document.getElementById('result').textContent = `طول القوس هو: ${arcLength.toFixed(2)} وحدة`;
+            } else {
+                document.getElementById('result').textContent = "يرجى إدخال قيم صحيحة لنصف القطر والزاوية.";
+            }
+        }
+
+        function calculateSectorArea() {
+            const radius = getRadius();
+            const angle = getAngle();
+            if (radius > 0 && angle > 0) {
+                const sectorArea = (angle / 360) * pi * Math.pow(radius, 2);
+                document.getElementById('result').textContent = `مساحة القطاع هي: ${sectorArea.toFixed(2)} وحدة مربعة`;
+            } else {
+                document.getElementById('result').textContent = "يرجى إدخال قيم صحيحة لنصف القطر والزاوية.";
+            }
+        }
+
+        function calculateSurfaceAreaSphere() {
+            const radius = getRadius();
+            if (radius > 0) {
+                const surfaceArea = 4 * pi * Math.pow(radius, 2);
+                document.getElementById('result').textContent = `مساحة سطح الكرة هي: ${surfaceArea.toFixed(2)} وحدة مربعة`;
+            } else {
+                document.getElementById('result').textContent = "يرجى إدخال قيمة صحيحة لنصف القطر.";
+            }
+        }
+
+        function calculateVolumeCylinder() {
+            const radius = getRadius();
+            const height = getHeight();
+            if (radius > 0 && height > 0) {
+                const volume = pi * Math.pow(radius, 2) * height;
+                document.getElementById('result').textContent = `حجم الأسطوانة هو: ${volume.toFixed(2)} وحدة مكعبة`;
+            } else {
+                document.getElementById('result').textContent = "يرجى إدخال قيم صحيحة لنصف القطر والارتفاع.";
+            }
+        }
+
+        function calculateSurfaceAreaCylinder() {
+            const radius = getRadius();
+            const height = getHeight();
+            if (radius > 0 && height > 0) {
+                const surfaceArea = 2 * pi * radius * (radius + height);
+                document.getElementById('result').textContent = `مساحة سطح الأسطوانة هي: ${surfaceArea.toFixed(2)} وحدة مربعة`;
+            } else {
+                document.getElementById('result').textContent = "يرجى إدخال قيم صحيحة لنصف القطر والارتفاع.";
+            }
+        }
+
+        function calculateVolumeCone() {
+            const radius = getRadius();
+            const height = getHeight();
+            if (radius > 0 && height > 0) {
+                const volume = (1/3) * pi * Math.pow(radius, 2) * height;
+                document.getElementById('result').textContent = `حجم المخروط هو: ${volume.toFixed(2)} وحدة مكعبة`;
+            } else {
+                document.getElementById('result').textContent = "يرجى إدخال قيم صحيحة لنصف القطر والارتفاع.";
+            }
+        }
+
+        function calculateSurfaceAreaCone() {
+            const radius = getRadius();
+            const height = getHeight();
+            if (radius > 0 && height > 0) {
+                const slantHeight = Math.sqrt(Math.pow(radius, 2) + Math.pow(height, 2));
+                const surfaceArea = pi * radius * (radius + slantHeight);
+                document.getElementById('result').textContent = `مساحة سطح المخروط هي: ${surfaceArea.toFixed(2)} وحدة مربعة`;
+            } else {
+                document.getElementById('result').textContent = "يرجى إدخال قيم صحيحة لنصف القطر والارتفاع.";
+            }
+        }
+    </script>
+<section class="in" id="in">
+    <h1 class="goin">تسجيل دخول</h1>
+    <div class="contactus" id="contactus">
+        <label for="name"> </label>
+        <input type="text" id="name" name="name" placeholder="enter your name"><br>
+        <label for="Email"></label>
+        <input type="email" id="Email" name="username" placeholder="enter your Email"><br>
+        <label for="password"></label>
+        <input type="password" id="password" name="password" placeholder="enter yuor password"><br>
+        <button type="submit">submit</button>
+    </div>
+</section>
+<footer>
+    <h4>2025 my portfolio.all rights reserved</h4>
+</footer>
+</body>
+</html>
