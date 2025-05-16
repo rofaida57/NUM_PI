@@ -1,0 +1,251 @@
+body {
+    font-family:'Almarai', sans-serif;
+    margin: 20px;
+    text-align: center;
+    background-image: url(pi3.jpeg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    
+}
+input {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 8px;
+    
+}
+button {
+    padding: 10px 20px;
+    font-size: 19px;
+    cursor: pointer;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    font-family:'Almarai', sans-serif;
+    border-radius: 8px;
+}
+input{
+    background-color: rgba(223, 255, 253, 0.767); 
+    margin: 15px;
+    font-size: 22px;
+}
+button:hover{
+    background-color:rgb(79, 198, 219);
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+}
+.section{
+margin-bottom: 30px;
+font-size: 20px;
+background-color: rgba(0, 0, 0, 0.74);
+margin: 20px;
+padding: 20px;
+}
+#result {
+    font-size: 27px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.596);
+    max-width: 700px;
+    margin-left: 32%;
+    margin-right: 32%;
+}
+.calc{
+height: 570px;
+}
+.h1{
+font-size: 40px;
+margin: 10px;
+padding: 15px;
+margin-top: -7px;
+}
+.hoome {
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 20px;
+color: black;
+background: linear-gradient(to left,rgb(79, 198, 219) 0%, rgb(79, 198, 219) 15%, rgba(255, 255, 255, 80%) 45%, white 60%);
+height: 350px;
+}
+
+.links {
+align-self: flex-end;
+margin-bottom: 20px;
+
+}
+
+.links a {
+margin-left: 15px;
+text-decoration: none;
+color: black;
+}
+.links a:hover{
+background-color: rgb(79, 198, 219);
+border-radius: 8px;
+color: white;
+
+
+}
+.content {
+display: flex;
+align-items: center;
+width: 100%;
+}
+
+.left {
+flex: 1;
+text-align: center;
+}
+
+.left img {
+max-width: 200px;
+height: auto;
+}
+
+.right {
+flex: 2;
+padding-left: 20px;
+}
+
+.right h1 {
+margin-bottom: 10px;
+font-size: 30px;
+}
+
+.right p {
+margin-bottom: 20px;
+line-height: 40px;
+font-size: 20PX;
+}
+.mod {
+display: flex;
+gap: 1rem;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+
+article {
+background-color: #00000085;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+padding: 1rem;
+width: 500px;
+height: 220px;
+margin: 15px;
+}
+article:hover{
+background-color: #000000e7;
+text-shadow: #ffffff;
+}
+article h3 {
+color: #ffffff;
+text-align: center;
+font-size: 25PX;
+}
+
+article p {
+color: #ffffff;
+line-height: 40px;
+font-size: 20PX;
+}
+
+article a {
+display: inline-block;
+margin-top:5px;
+padding: 0.5rem 1rem;
+background-color: #000000d7;
+color: #fff;
+text-decoration: none;
+border-radius: 4px;
+display: block;
+}
+article a:hover{
+background-color: rgba(79, 198, 219, 0.726);
+
+}
+#com{
+
+margin: 30px;
+}
+
+
+
+
+
+footer{
+text-align: center;
+padding: 10px 0;
+background-color: black;
+color: aliceblue;
+width: 100%;
+bottom: 0;
+margin-bottom: -20px;
+}
+.contactus {
+width: 300px;
+margin: 40px auto;
+padding: 20px;
+background:rgba(255, 255, 255, 0.582); /* لون وردي فاتح */
+border-radius: 12px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+font-family: 'Poppins', sans-serif;
+text-align: center;
+}
+
+.contactus label {
+font-weight: 500;
+display: block;
+margin-top: 10px;
+color: #444;
+font-size: 14px;
+}
+
+.contactus input {
+width: 90%;
+padding: 10px;
+margin-top: 5px;
+border: 1px solid #ddd;
+border-radius: 8px;
+font-size: 14px;
+background: #ffffffad;
+transition: 0.3s;
+}
+
+.contactus input:focus {
+outline: none;
+border-color: rgb(79, 198, 219); /* لون وردي جميل */
+box-shadow: 0 0 5px rgb(102, 218, 238);
+}
+
+.contactus button {
+width: 100%;
+padding: 10px;
+margin-top: 15px;
+background: rgb(79, 198, 219); /* لون وردي زاهي */
+color: white;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-size: 16px;
+transition: 0.3s;
+}
+
+.contactus button:hover {
+background:  rgb(112, 226, 247); /* لون أغمق قليلاً عند التحويم */
+}
+.in{
+padding: 30px;
+margin:  70px 30px 30px;
+max-height: 550px;
+}
